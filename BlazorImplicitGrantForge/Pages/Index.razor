@@ -1,0 +1,17 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+
+@if (!authenticated)
+{
+    <p>
+        <a href="@authorizeUrl">Authenticate at Forge</a>
+    </p>
+}
+else
+{
+    <p>
+        Successfully authenticated, user info:<br />
+        <pre>@userInfo</pre>
+    </p>
+}
